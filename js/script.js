@@ -56,3 +56,67 @@ function ex5(){
 
     alert("Temperatura em Fahrenheit: " + resultado);
 }
+
+function ex6(){
+    var km = document.querySelector("#velocidade").value;
+    // m/s = (km/h)/3.6
+    
+    m = km/3.6;
+    alert("Velocidade em m/s: " + m.toFixed(2) + ";");
+}
+
+function ex7(){
+    var base = document.querySelector("#base").value;
+    var altura = document.querySelector("#altura").value;
+    // Area=base*altura
+
+    area = base*altura;
+    alert("A área deste retângulo é de: " + area + " metros quadrados;");
+}
+
+function ex8(){
+    var idade = parseInt(document.querySelector("#idade").value);
+    // Dias=anos*365
+
+    Dias = idade*365;
+    alert("Sua idade de " + idade + " anos é igual a: " + Dias + " dias;")
+}
+
+function ex9(){
+    var nota1 = parseInt(document.querySelector("#nota-1").value);
+    var nota2 = parseInt(document.querySelector("#nota-2").value);
+    var nota3 = parseInt(document.querySelector("#nota-3").value);
+    // Média = (nota 1 + nota 2 + nota 3)/3
+
+    media = (nota1 + nota2 + nota3)/3;
+    alert("Sua média anual é de: " + media.toFixed(1) + " pontos;");
+}
+
+function ex10(){
+    var valorMetro = parseInt(document.querySelector("#metros").value);
+    var selectOperationMetro = document.querySelector('input[name="operation"]:checked').value;
+    var nameOperationMetro, convercao;
+    // CM = m*100
+    // Mm = m*1000
+
+    if (selectOperationMetro == "centimetros"){
+        nameOperationMetro = "Centímetros";
+        convercao = valorMetro*100;
+    } else if(selectOperationMetro == "milimetros"){
+        nameOperationMetro = "Milímetros";
+        convercao = valorMetro*1000;
+    }
+
+    alert("Valor em " + nameOperationMetro + ": "  + convercao + ";");
+}
+
+function ex11(){
+    var raio = document.querySelector("#raio").value;
+    var alturaCilindro = document.querySelector("#alturaCilindro").value;
+    // Volume = TT*raio2*altura
+    // TT = 3.14
+
+    volumeCilindro = 3.14*(raio*raio)*alturaCilindro;
+
+    alert("O volume deste cilindro é de: " + volumeCilindro.toFixed(2) + " metros cúbicos;");
+}
